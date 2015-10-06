@@ -5,19 +5,19 @@
 		<title>Todo list | Hecho con Angular.js</title>
 		<link rel="stylesheet" href="modules/todomvc-common/base.css">
 		<link rel="stylesheet" href="modules/todomvc-app-css/index.css">
-		<style>[ng-cloak] { display: none; }</style>
+		<style>[ng-cloak] { display: none }</style>
 	</head>
 	<body>
 		<section id="todoapp" ng-controller="TodoCtrl">
 			<header id="header">
 				<h1>todo list</h1>
 				<form id="todo-form" ng-submit="addTodo()">
-					<input id="new-todo" placeholder="Tareas por hacer" ng-model="newTodo" autofocus>
+					<input id="new-todo" placeholder="Lista de tareas por hacer" ng-model="newTodo" autofocus>
 				</form>
 			</header>
 			<section id="main" ng-show="todos.length" ng-cloak>
 				<input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
-				<label for="toggle-all">Marcar todas como completadas</label>
+				<label for="toggle-all">Marcar todas las tareas como completadas</label>
 				<ul id="todo-list">
 					<li ng-repeat="todo in todos | filter:statusFilter track by $index" ng-class="{completed: todo.completed, editing: todo == editedTodo}">
 						<div class="view">
@@ -50,7 +50,7 @@
 			</footer>
 		</section>
 		<footer id="info">
-			<p>Doble clic para editar una tarea
+			<p>Doble clic para poder editar una tarea
             <br>Octubre 2015
 			</p>
 		</footer>
