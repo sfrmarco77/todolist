@@ -3,8 +3,8 @@
 
 /**
  * The main controller for the app. The controller:
- * - retrieves and persists the model via the todoStorage service
- * - exposes the model to the template and provides event handlers
+ * - recupera y mantiene el modelo via el servicio todoStorage
+ * - expone el model a el template y proporciona los manejadores de eventos
  */
 todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $filter, todoStorage) {
 	var todos = $scope.todos = todoStorage.get();
@@ -45,7 +45,7 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $filter, tod
 
 	$scope.editTodo = function (todo) {
 		$scope.editedTodo = todo;
-		// Clone the original todo to restore it on demand.
+		// Clone el original para restaurar en demanda
 		$scope.originalTodo = angular.extend({}, todo);
 	};
 
