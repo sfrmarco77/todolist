@@ -1,9 +1,0 @@
-modules/todomvc-common
-!modules/todomvc-common/base.js
-!modules/todomvc-common/base.css
-
-modules/todomvc-app-css
-!modules/todomvc-app-css/index.css
-
-modules/angular
-!modules/angular/angular.js
